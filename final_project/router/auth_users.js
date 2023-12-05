@@ -65,7 +65,7 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
     return res.status(404).json({ message: "Book not found" });
   }});
 
-  regd_users.delete("/auth/review/:isbn", authenticateToken, (req, res) => {
+  regd_users.delete("/auth/review/:isbn",  (req, res)=> {
     const requestedISBN = req.params.isbn;
     const username = req.user.username;
   
